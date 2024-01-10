@@ -20,6 +20,13 @@
             "weekNumber": 4,
             "weekEndsOn": "2023-12-01",
             "nextWeekStartsOn": "2023-12-02"
+        },
+        {
+            "id": 4,
+            "gymName": "Urban Climb Collingwood",
+            "weekNumber": 1,
+            "weekEndsOn": "2023-12-01",
+            "nextWeekStartsOn": "2023-12-02"
         }
     ]
 }
