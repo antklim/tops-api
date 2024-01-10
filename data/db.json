@@ -1,0 +1,25 @@
+{
+    "gyms": [
+        {
+            "id": 1,
+            "gymName": "Brunswick",
+            "weekNumber": 4,
+            "weekEndsOn": "2023-12-09",
+            "nextWeekStartsOn": "2023-12-10"
+        },
+        {
+            "id": 2,
+            "gymName": "Northcote",
+            "weekNumber": 3,
+            "weekEndsOn": "2023-11-29",
+            "nextWeekStartsOn": "2023-11-30"
+        },
+        {
+            "id": 3,
+            "gymName": "The Lactic Factory",
+            "weekNumber": 4,
+            "weekEndsOn": "2023-12-01",
+            "nextWeekStartsOn": "2023-12-02"
+        }
+    ]
+}
