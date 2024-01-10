@@ -1,4 +1,3 @@
-import { serve } from "https://deno.land/std@0.158.0/http/server.ts";
 import { handler } from "./routes/router.ts";
 
 interface AppOtions {
@@ -10,5 +9,5 @@ type App = (
 ) => void;
 
 export const app: App = (options = {}) => {
-  serve(handler, options);
+  Deno.serve(options, handler);
 };

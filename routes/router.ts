@@ -1,4 +1,3 @@
-import { Handler } from "https://deno.land/std@0.158.0/http/server.ts";
 import * as articlesRoute from "./gyms/index.ts";
 
 const match = (
@@ -13,11 +12,12 @@ const match = (
   return null;
 };
 
-export const handler: Handler = (req, connInfo) => {
+export const handler: Deno.ServeHandler = (req, connInfo) => {
   const m = match(req.url, articlesRoute.patterns);
+
   if (m) {
     return articlesRoute.handler(m)(req, connInfo);
   }
 
-  return new Response("Welcome to Faker!");
+  return new Response("Welcome Tops API!");
 };

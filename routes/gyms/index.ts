@@ -1,4 +1,3 @@
-import { Handler } from "https://deno.land/std@0.158.0/http/server.ts";
 import { notFoundHandler } from "../notFound.ts";
 import db from "../../data/db.json" assert { type: "json" };
 
@@ -8,7 +7,7 @@ export const patterns: URLPattern[] = [
   new URLPattern({ pathname: "/gyms/:id" }),
 ];
 
-const articlesHandler: Handler = () =>
+const articlesHandler: Deno.ServeHandler = () =>
   new Response(JSON.stringify(db.gyms), {
     status: 200,
     headers: {
@@ -16,7 +15,7 @@ const articlesHandler: Handler = () =>
     },
   });
 
-const articleHandler = (id: string): Handler => {
+const articleHandler = (id: string): Deno.ServeHandler => {
   const article = db.gyms.find((a) => `${a.id}` === id);
 
   if (!article) {
@@ -32,7 +31,7 @@ const articleHandler = (id: string): Handler => {
     });
 };
 
-export const handler = (match: URLPatternResult): Handler => {
+export const handler = (match: URLPatternResult): Deno.ServeHandler => {
   const articleId = match.pathname.groups.id;
   if (articleId) {
     return articleHandler(articleId);

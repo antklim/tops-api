@@ -1,3 +1,3 @@
-# proto-deno
+# tops-api
 
-A template repository for projects in 🦕 [Deno](https://deno.land/).
+Tops Api in 🦕 [Deno](https://deno.land/).
