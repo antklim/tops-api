@@ -1,13 +1,8 @@
 import { handler } from "./routes/router.ts";
 
-interface AppOtions {
+interface AppOptions {
   port: number;
 }
 
-type App = (
-  options?: Partial<AppOtions>,
-) => void;
-
-export const app: App = (options = {}) => {
+export const app = (options: Partial<AppOptions> = {}) =>
   Deno.serve(options, handler);
-};
