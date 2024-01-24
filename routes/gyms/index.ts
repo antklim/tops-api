@@ -1,5 +1,5 @@
 import { notFoundHandler } from "../notFound.ts";
-import db from "../../data/db.json" assert { type: "json" };
+import db from "../../data/db.json" with { type: "json" };
 
 export const patterns: URLPattern[] = [
   new URLPattern({ pathname: "/gyms" }),

@@ -1,23 +1,19 @@
 {
   "fmt": {
-    "files": {
-      "exclude": [
-        ".cache",
-        ".github",
-        ".vscode",
-        ".gitignore",
-        "deno.json",
-        "lock.json",
-        "README.md"
-      ]
-    }
+    "exclude": [
+      ".cache",
+      ".github",
+      ".vscode",
+      ".gitignore",
+      "deno.json",
+      "lock.json",
+      "README.md"
+    ]
   },
   "lint": {
-    "files": {
-      "exclude": [
-        ".cache"
-      ]
-    }
+    "exclude": [
+      ".cache"
+    ]
   },
   "tasks": {
     "start": "deno run --allow-env=PORT --allow-net main.ts",
