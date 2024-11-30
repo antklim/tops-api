@@ -6,7 +6,6 @@
       ".vscode",
       ".gitignore",
       "deno.json",
-      "lock.json",
       "README.md"
     ]
   },
@@ -17,6 +16,6 @@
   },
   "tasks": {
     "start": "deno run --allow-env=PORT --allow-net main.ts",
-    "test": "deno test -A --unstable --allow-none"
+    "test": "deno test -A --permit-no-files"
   }
 }
